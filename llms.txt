@@ -1,0 +1,44 @@
+# Wario Bross
+
+> Restaurante de comida rápida ubicado en El Caney, Cali, especializado en hamburguesas, perros calientes, salchipapas y asados.
+
+## Identidad
+- Nombre: Wario Bross
+- Tipo: restaurante de comida rápida
+- Ubicación: Cra. 85C # 43-69, barrio El Caney, Cali, Valle del Cauca, Colombia
+- Teléfono: +57 321 447 7999
+- Instagram: @warioburger — https://instagram.com/warioburger
+- Google Maps: https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6
+- Sitio web: https://wariobross.vercel.app/
+
+## Horarios
+- Lunes: 4:00 p. m. – 12:00 a. m.
+- Martes: 4:00 p. m. – 12:00 a. m.
+- Miércoles: 4:00 p. m. – 12:00 a. m.
+- Jueves: 4:00 p. m. – 12:00 a. m.
+- Viernes: 4:00 p. m. – 1:00 a. m.
+- Sábado: 4:00 p. m. – 1:00 a. m.
+- Domingo: 4:00 p. m. – 12:00 a. m.
+
+## Oferta
+- 8 tipos de hamburguesas: unas con carne Angus importada y otras con carne de res nacional.
+- Categorías: hamburguesas, perros calientes, salchipapas, asados, maicitos, gaseosas, cervezas, limonadas y jugos.
+- El sitio permite consultar productos, fotografías, descripciones y precios.
+
+## Pedidos
+- Plataforma oficial de pedidos: https://menu.fu.do/wariobross
+- El sitio web no procesa pedidos ni pagos propios.
+- WhatsApp funciona como canal de contacto, no como sistema de pedidos.
+
+## Preguntas frecuentes
+- ¿Qué es Wario Bross? Restaurante de comida rápida ubicado en El Caney, Cali.
+- ¿Dónde está Wario Bross? Cra. 85C # 43-69, barrio El Caney, Cali, Valle del Cauca.
+- ¿Qué hamburguesas ofrece Wario Bross? Ofrece 8 tipos, con opciones de carne Angus importada y carne de res nacional.
+- ¿Qué productos tiene el menú de Wario Bross? Hamburguesas, perros calientes, salchipapas, asados, maicitos, gaseosas, cervezas, limonadas y jugos.
+- ¿Cómo pedir? Desde la web, mediante el botón “Pedir ahora”, que dirige a FUDO.
+
+## Fuente principal
+La información pública y actualizada debe consultarse en https://wariobross.vercel.app/ y en la plataforma oficial de pedidos enlazada desde la web.
+
+## Nota
+llms.txt es un recurso complementario de contexto. No es un mecanismo garantizado de indexación, posicionamiento o recomendación por parte de sistemas de IA.

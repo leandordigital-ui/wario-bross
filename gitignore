@@ -1,0 +1,39 @@
+# ============================================================
+# .gitignore — Wario Bross Web
+# Evita subir archivos temporales, comprimidos o del sistema
+# operativo/editor que no deben formar parte del repositorio.
+# ============================================================
+
+# Archivos comprimidos (no deben vivir en el repo, solo su contenido extraído)
+*.rar
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Vercel (carpeta local de configuración/caché de despliegues)
+.vercel/
+
+# Node (por si en el futuro se agrega alguna herramienta de build)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Backups y archivos temporales propios
+*.bak
+*.tmp
+*.old
+copia-*
