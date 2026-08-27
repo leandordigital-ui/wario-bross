@@ -629,6 +629,104 @@ button:focus-visible{
 .seccion-pendiente{ min-height:1px; }
 
 
+/* ============================================================
+   7) RESEÑAS (GOOGLE MAPS) — carrusel continuo
+   Reseñas reales transcritas manualmente (sin scraping ni API).
+   Carrusel infinito por CSS (translateX en loop); el JS solo
+   duplica las tarjetas para el efecto de bucle sin costuras.
+   Full-bleed: rompe el .contenedor para sensación de cinta.
+============================================================= */
+.resenas{ background:var(--color-fondo); padding:64px 0 60px; overflow:hidden; }
+.resenas-intro{
+  max-width:640px; margin:0 auto; text-align:center; padding:0 20px 8px;
+}
+.resenas-intro h2{
+  font-family:var(--fuente-seccion); font-weight:800;
+  font-size:clamp(30px,6vw,44px); color:var(--color-marca-oscuro); letter-spacing:.5px;
+}
+.resenas-intro p{
+  margin-top:14px; font-size:15.5px; line-height:1.6; color:var(--color-texto-sutil);
+}
+.resenas-google{
+  display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+  font-family:var(--fuente-detalle); font-size:13px; font-weight:700;
+  color:var(--color-teal);
+}
+
+.resenas-viewport{
+  margin-top:34px; width:100%; overflow:hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+}
+.resenas-track{
+  display:flex; gap:20px; width:max-content;
+  padding: 4px 20px 16px;
+  animation: desplazarResenas 42s linear infinite;
+}
+.resenas-viewport:hover .resenas-track,
+.resenas-viewport:focus-within .resenas-track{
+  animation-play-state: paused;
+}
+@keyframes desplazarResenas{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); } /* el JS duplica las tarjetas: -50% = 1 vuelta exacta */
+}
+
+.resena-card{
+  flex:0 0 auto;
+  width:min(84vw, 320px);
+  background:var(--color-superficie);
+  border:1.5px solid var(--color-borde);
+  border-radius:var(--radio);
+  box-shadow:var(--sombra);
+  padding:20px 20px 18px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.resena-cabecera{ display:flex; align-items:center; gap:12px; }
+.resena-avatar{
+  flex-shrink:0; width:44px; height:44px; border-radius:50%;
+  background:var(--color-superficie-2); color:var(--color-marca-oscuro);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--fuente-seccion); font-weight:800; font-size:16px;
+}
+.resena-autor{ min-width:0; }
+.resena-nombre{
+  font-family:var(--fuente-seccion); font-weight:700; font-size:14.5px;
+  color:var(--color-texto); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.resena-meta{
+  font-family:var(--fuente-detalle); font-size:12px; color:var(--color-texto-sutil);
+}
+.resena-estrellas{ font-size:14px; letter-spacing:1px; color:var(--color-dorado); }
+.resena-texto{
+  font-size:14px; line-height:1.55; color:var(--color-texto);
+  display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;
+}
+.resena-tiempo{
+  font-family:var(--fuente-detalle); font-size:11.5px; color:var(--color-texto-sutil);
+}
+.resena-link{
+  margin-top:auto; align-self:flex-start;
+  font-family:var(--fuente-detalle); font-weight:700; font-size:12.5px;
+  color:var(--color-teal); padding-top:4px;
+}
+.resena-link:hover{ text-decoration:underline; }
+
+.resenas-cta{ text-align:center; margin-top:8px; }
+
+@media (min-width:720px){
+  .resena-card{ width:300px; }
+}
+@media (min-width:1080px){
+  .resena-card{ width:340px; }
+  .resenas-track{ padding-left:calc((100vw - 1180px) / 2 + 20px); }
+}
+@media (prefers-reduced-motion: reduce){
+  .resenas-track{ animation:none; overflow-x:auto; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch; }
+  .resena-card{ scroll-snap-align:start; }
+  .resenas-track [data-resena-clon]{ display:none; } /* sin loop: no repetir tarjetas */
+}
+
 /* FOOTER / INFORMACIÓN INSTITUCIONAL */
 .footer{background:var(--color-marca-oscuro);color:rgba(255,255,255,.92);border-top:5px solid var(--color-dorado)}
 .footer-main{padding:52px 0 36px}.footer-grid{display:grid;grid-template-columns:1fr;gap:36px}.footer-brand{max-width:420px}.footer-brand-logo{width:120px;height:120px;object-fit:contain;border-radius:0;background:transparent;padding:0}.footer-brand h2{margin-top:16px;font-family:var(--fuente-display);font-size:30px;line-height:1;letter-spacing:.5px;color:#fff}.footer-brand p{margin-top:12px;font-family:var(--fuente-detalle);font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.76);max-width:42ch}.footer-heading{font-family:var(--fuente-seccion);font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--color-dorado);margin-bottom:14px}.footer-links{display:grid;gap:8px}.footer-links a{width:max-content;max-width:100%;font-size:14px;color:rgba(255,255,255,.88);padding:2px 0;transition:color .15s ease,transform .15s ease}.footer-links a:hover{color:#fff;transform:translateX(2px)}.footer-contact{display:grid;gap:12px}.footer-contact-item{display:grid;gap:3px}.footer-contact-label{font-family:var(--fuente-detalle);font-size:11px;text-transform:uppercase;letter-spacing:.9px;color:rgba(255,255,255,.56)}.footer-contact a,.footer-contact span{font-size:14px;line-height:1.45;color:#fff}.footer-contact a:hover{color:var(--color-dorado)}.footer-contact a[data-maps-link]{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.footer-contact a[data-maps-link]::after{content:" ↗";font-size:.9em}.footer-mapa{margin-top:8px;border-radius:12px;overflow:hidden;aspect-ratio:4/3;max-width:300px;border:1px solid rgba(255,255,255,.14)}.footer-mapa iframe{width:100%;height:100%;border:0;display:block}.footer-hours{width:100%;border-collapse:collapse;font-family:var(--fuente-detalle);font-size:13.5px}.footer-hours tr{border-bottom:1px solid rgba(255,255,255,.09)}.footer-hours tr:last-child{border-bottom:0}.footer-hours th,.footer-hours td{padding:7px 0;text-align:left}.footer-hours th{color:rgba(255,255,255,.72);font-weight:400;padding-right:14px}.footer-hours td{color:#fff;white-space:nowrap}.footer-cta{margin-top:20px}.footer-cta .btn{width:100%}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0 22px}.footer-bottom-inner{display:flex;flex-direction:column;gap:8px;align-items:flex-start}.footer-copy,.footer-note{font-family:var(--fuente-detalle);font-size:12px;line-height:1.4;color:rgba(255,255,255,.58)}.footer-note{color:rgba(255,255,255,.42)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media (min-width:720px){.footer-grid{grid-template-columns:1.25fr .75fr 1fr;gap:42px}.footer-cta .btn{width:auto}.footer-bottom-inner{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}}@media (min-width:980px){.footer-grid{grid-template-columns:1.3fr .7fr 1fr 1.1fr;gap:34px}}
@@ -651,6 +749,7 @@ button:focus-visible{
       <a href="#inicio" data-nav-link>Inicio</a>
       <a href="#quienes-somos" data-nav-link>Quiénes somos</a>
       <a href="#menu" data-nav-link>Menú</a>
+      <a href="#resenas" data-nav-link>Reseñas</a>
       <a href="#ubicacion" data-nav-link>Contáctanos</a>
     </nav>
 
@@ -763,6 +862,27 @@ button:focus-visible{
     <div class="contenedor menu-categorias" id="menuCategorias"></div>
   </section>
 
+  <!-- ======================================
+       RESEÑAS (GOOGLE MAPS)
+       Contenido data-driven (array RESENAS). Reseñas reales,
+       transcritas manualmente por el cliente, con atribución
+       y enlace directo a cada reseña original en Google Maps.
+  ======================================= -->
+  <section id="resenas" class="resenas" aria-labelledby="resenasTitulo">
+    <div class="resenas-intro">
+      <p class="eyebrow">Lo que dicen de nosotros</p>
+      <h2 id="resenasTitulo">Reseñas de nuestros clientes</h2>
+      <p>Opiniones reales de clientes de Wario Bross publicadas en Google Maps.</p>
+      <a class="resenas-google" href="https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6" target="_blank" rel="noopener noreferrer" data-maps-link>
+        ⭐ Ver perfil de Google Maps ↗
+      </a>
+    </div>
+
+    <div class="resenas-viewport">
+      <div class="resenas-track" id="resenasTrack"></div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ======================================
@@ -802,7 +922,7 @@ button:focus-visible{
       <nav aria-label="Navegación del pie de página">
         <h3 class="footer-heading">Explora</h3>
         <ul class="footer-links">
-          <li><a href="#inicio">Inicio</a></li><li><a href="#quienes-somos">Quiénes somos</a></li><li><a href="#menu">Menú</a></li><li><a href="#ubicacion">Contáctanos</a></li>
+          <li><a href="#inicio">Inicio</a></li><li><a href="#quienes-somos">Quiénes somos</a></li><li><a href="#menu">Menú</a></li><li><a href="#resenas">Reseñas</a></li><li><a href="#ubicacion">Contáctanos</a></li>
         </ul>
       </nav>
 
@@ -1018,6 +1138,20 @@ const MENU = [
   }
 ];
 
+/* ============================================================
+   DATOS DE RESEÑAS (GOOGLE MAPS)
+   Transcritas manualmente por el cliente desde Google Maps.
+   No se scrapea ni se usa la API de Google. "estrellas: null"
+   significa que el dato no fue proporcionado; no se inventa.
+============================================================= */
+const RESENAS = [
+  { nombre: "Alexander Salazar Marin", reseñasAutor: "2 reseñas", estrellas: 5, tiempo: "Hace un mes", texto: "Atención super ágil y amable, siempre piensan en lo mejor que el usuario desea comer. Ambiente súper agradable y de fácil acceso. Volveré a este lugar.", link: "https://maps.app.goo.gl/r52YrmGBNVtK9kGm8" },
+  { nombre: "Paris Michell", reseñasAutor: "8 reseñas · 2 fotos", estrellas: 5, tiempo: "Hace un mes", texto: "Tuve la oportunidad de comer ahí, el lugar me encantó. El servicio fue excelente, la comida estuvo muy exquisita y me gustó mucho la atención. Literalmente recomendado 100 por ciento.", link: "https://maps.app.goo.gl/4Qu8CgGnbVkEUE1z9" },
+  { nombre: "Daniela Alexandra Escobar", reseñasAutor: "3 reseñas", estrellas: 5, tiempo: "Hace un mes", texto: "He comido muchas veces ahí, en especial la promo de 2x1 en perros, y la verdad me encanta la atención y el sabor de la comida. Dios mío, ni hablar, qué cosa tan sabrosa.", link: "https://maps.app.goo.gl/bb9tArzbFmWqMSQU7" },
+  { nombre: "Mara Lucia López Ariza", reseñasAutor: "2 reseñas · 2 fotos", estrellas: 5, tiempo: "Hace un mes", texto: "Rápida atención. Juegos de mesa disponibles, que entretienen y permiten distraerse mientras te sirven.", link: "https://maps.app.goo.gl/TJ9dkQR3HHdrHgCM6" },
+  { nombre: "Jorch Alvarez", reseñasAutor: "4 reseñas · 3 fotos", estrellas: null, tiempo: "Hace 2 meses", texto: "Excelente ambiente. Excelente la atención a mesa y ni hablar de la comida, súper recomendable este lugar.", link: "https://maps.app.goo.gl/caakP94DBwE9cFhb6" }
+];
+
 function formatoCOP(valor){
   return "$" + valor.toLocaleString("es-CO");
 }
@@ -1130,6 +1264,80 @@ function renderizarMenu(){
 
 renderizarCategoriasNav();
 renderizarMenu();
+
+/* ============================================================
+   RENDER DE RESEÑAS + CARRUSEL CONTINUO
+   El track se duplica una vez (5 reales + 5 clones = 10) para
+   que la animación de -50% cree un bucle infinito sin costuras.
+   Los clones se marcan aria-hidden y data-resena-clon para que
+   lectores de pantalla no los anuncien dos veces, y para poder
+   ocultarlos cuando el usuario prefiere movimiento reducido.
+============================================================= */
+function crearTarjetaResena(r, esClon){
+  const card = document.createElement('article');
+  card.className = 'resena-card';
+  if(esClon) { card.setAttribute('aria-hidden', 'true'); card.setAttribute('data-resena-clon', ''); }
+
+  const cabecera = document.createElement('div');
+  cabecera.className = 'resena-cabecera';
+
+  const avatar = document.createElement('span');
+  avatar.className = 'resena-avatar';
+  avatar.textContent = r.nombre.trim().charAt(0).toUpperCase();
+  avatar.setAttribute('aria-hidden', 'true');
+  cabecera.appendChild(avatar);
+
+  const autor = document.createElement('div');
+  autor.className = 'resena-autor';
+  const nombre = document.createElement('p');
+  nombre.className = 'resena-nombre';
+  nombre.textContent = r.nombre;
+  const meta = document.createElement('p');
+  meta.className = 'resena-meta';
+  meta.textContent = r.reseñasAutor;
+  autor.appendChild(nombre);
+  autor.appendChild(meta);
+  cabecera.appendChild(autor);
+  card.appendChild(cabecera);
+
+  if(r.estrellas){
+    const estrellas = document.createElement('p');
+    estrellas.className = 'resena-estrellas';
+    estrellas.setAttribute('aria-label', r.estrellas + ' de 5 estrellas');
+    estrellas.textContent = '★'.repeat(r.estrellas) + '☆'.repeat(5 - r.estrellas);
+    card.appendChild(estrellas);
+  }
+
+  const texto = document.createElement('p');
+  texto.className = 'resena-texto';
+  texto.textContent = r.texto;
+  card.appendChild(texto);
+
+  const tiempo = document.createElement('p');
+  tiempo.className = 'resena-tiempo';
+  tiempo.textContent = r.tiempo + ' · Google';
+  card.appendChild(tiempo);
+
+  const enlace = document.createElement('a');
+  enlace.className = 'resena-link';
+  enlace.href = r.link;
+  enlace.target = '_blank';
+  enlace.rel = 'noopener noreferrer';
+  enlace.textContent = 'Ver reseña en Google Maps ↗';
+  if(esClon) enlace.setAttribute('tabindex', '-1');
+  card.appendChild(enlace);
+
+  return card;
+}
+
+function renderizarResenas(){
+  const track = document.getElementById('resenasTrack');
+  if(!track) return;
+  RESENAS.forEach(function(r){ track.appendChild(crearTarjetaResena(r, false)); });
+  /* Duplicado para el bucle continuo (decorativo, oculto a lectores de pantalla) */
+  RESENAS.forEach(function(r){ track.appendChild(crearTarjetaResena(r, true)); });
+}
+renderizarResenas();
 
 /* ============================================================
    MODAL DE DETALLE DE PRODUCTO
