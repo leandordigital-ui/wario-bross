@@ -4,15 +4,14 @@
 
 <!-- ============================================================
      CONFIGURACIÓN GENERAL / SEO BÁSICO
-     TODO Fase 8: confirmar dominio real de producción en Vercel
-     y reemplazar TODAS las apariciones de "TU-DOMINIO-VERCEL"
+     Dominio de producción confirmado: https://wario-bross.vercel.app/
 ============================================================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wario Bross | Hamburguesas, Hot Dogs y Asados en Cali</title>
 <meta name="description" content="Hamburguesas artesanales, hot dogs, asados y salchipapas en Cali. Carne Angus importada, sabor a Cali. Pide en línea en Wario Bross.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://TU-DOMINIO-VERCEL.vercel.app/">
+<link rel="canonical" href="https://wario-bross.vercel.app/">
 <meta name="theme-color" content="#FAF8F5">
 
 <!-- Favicon y logo de marca: versiones PNG con fondo transparente -->
@@ -23,8 +22,8 @@
 <!-- Open Graph — imagen OG 1200x630 propia pendiente (Fase 8). Placeholder: logo -->
 <meta property="og:title" content="Wario Bross | Hamburguesas, Hot Dogs y Asados en Cali">
 <meta property="og:description" content="Hamburguesas artesanales, hot dogs, asados y salchipapas en Cali. Carne Angus importada, sabor a Cali. Pide en línea.">
-<meta property="og:image" content="https://TU-DOMINIO-VERCEL.vercel.app/img/brand/logo-wario-bross-512.png">
-<meta property="og:url" content="https://TU-DOMINIO-VERCEL.vercel.app/">
+<meta property="og:image" content="https://wario-bross.vercel.app/img/brand/logo-wario-bross-512.png">
+<meta property="og:url" content="https://wario-bross.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wario Bross">
 <meta property="og:locale" content="es_CO">
@@ -700,7 +699,7 @@ button:focus-visible{
 .resena-estrellas{ font-size:14px; letter-spacing:1px; color:var(--color-dorado); }
 .resena-texto{
   font-size:14px; line-height:1.55; color:var(--color-texto);
-  display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;
+  display:-webkit-box; -webkit-line-clamp:5; line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;
 }
 .resena-tiempo{
   font-family:var(--fuente-detalle); font-size:11.5px; color:var(--color-texto-sutil);
@@ -1012,10 +1011,10 @@ const MENU = [
     categoria: "PROMOS",
     icono: "🎉",
     productos: [
-      { nombre: "Combo Familiar Wario (Bacon)", desc: "4 Wario Burger con tocineta, 4 papas a la francesa y 1 gaseosa litro Postobón.", imagen: "https://i.postimg.cc/LXYJYf6H/COMBO-FAMILIAR-BACON.png", precio: 63900, personas: 4 },
-      { nombre: "Combo Parejas", desc: "2 Wario Burger, 2 limonadas, 1 papas a la francesa con tocineta y queso cheddar. ¡Gratis 1 copa de helado!", imagen: "https://i.postimg.cc/pThmh8XW/COMBO-PAREJA.png", precio: 37900, personas: 2 },
-      { nombre: "2x1 Angus Burger", desc: "2 hamburguesas con carne 100% black Angus importada, con papas a la francesa para 2 personas, salsa caleña y salsa de ajo.", imagen: "https://i.postimg.cc/Ls0q8vSy/2X1-ANGUS-BURGER.png", precio: 31900, personas: 2 },
-      { nombre: "2x1 Wario Burger", desc: "2 hamburguesas con carne de res tradicional, papas a la francesa, acompañadas con salsa caleña.", imagen: "https://i.postimg.cc/xdFk1gQ6/2X1-WARIO-BURGER.png", precio: 26000, personas: 2 }
+      { nombre: "Combo Familiar Wario (Bacon)", desc: "4 Wario Burger con tocineta, 4 papas a la francesa y 1 gaseosa litro Postobón.", imagen: "img/products/combo-familiar-wario-bacon.webp", precio: 63900, personas: 4 },
+      { nombre: "Combo Parejas", desc: "2 Wario Burger, 2 limonadas, 1 papas a la francesa con tocineta y queso cheddar. ¡Gratis 1 copa de helado!", imagen: "img/products/combo-parejas.webp", precio: 37900, personas: 2 },
+      { nombre: "2x1 Angus Burger", desc: "2 hamburguesas con carne 100% black Angus importada, con papas a la francesa para 2 personas, salsa caleña y salsa de ajo.", imagen: "", precio: 31900, personas: 2 },
+      { nombre: "2x1 Wario Burger", desc: "2 hamburguesas con carne de res tradicional, papas a la francesa, acompañadas con salsa caleña.", imagen: "img/products/2x1-wario-burger.webp", precio: 26000, personas: 2 }
     ]
   },
   {
@@ -1023,10 +1022,10 @@ const MENU = [
     icono: "🍔",
     sub: "Generación Crystal",
     productos: [
-      { nombre: "Generación Crystal", desc: "Doble carne angus 200g, pan artesanal de orégano, doble queso cheddar, doble tocino ahumado pork, cebolla crispy, salsa de maracuyá, lechuga y tomates frescos, papas a la francesa y salsa caleña.", imagen: "https://i.postimg.cc/hjkf9jfv/DOBLE-CRYSTAL.png", precio: 29900 },
-      { nombre: "Generación Milenials", desc: "Carne angus 140g, pan artesanal, quesillo, costilla carnuda, pepinillos dulces, cebolla caramelizada, salsa de maracuyá, lechuga fresca, papas a la francesa y salsa caleña.", imagen: "https://i.postimg.cc/Wz0tSvkK/MILENIALS.png", precio: 25900 },
-      { nombre: "Generación X", desc: "Carne angus 140g, pan artesanal, doble queso mozarella, tocino ahumado pork, cebolla encurtida en salsa de arrechón, lechuga fresca, papas a la francesa y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/852jh5jv/GENERACION-X.png", precio: 25900 },
-      { nombre: "American Angus", desc: "Pan artesanal a las finas hierbas, 140g de carne 100% Angus, tocino ahumado, queso cheddar, lechuga crespa, tomates frescos, cebolla crispy, papas a la francesa y salsa de la casa.", imagen: "https://i.postimg.cc/25XqSTYX/AMERICAN-ANGUS.png", precio: 25900 }
+      { nombre: "Generación Crystal", desc: "Doble carne angus 200g, pan artesanal de orégano, doble queso cheddar, doble tocino ahumado pork, cebolla crispy, salsa de maracuyá, lechuga y tomates frescos, papas a la francesa y salsa caleña.", imagen: "img/products/generacion-crystal.webp", precio: 29900 },
+      { nombre: "Generación Milenials", desc: "Carne angus 140g, pan artesanal, quesillo, costilla carnuda, pepinillos dulces, cebolla caramelizada, salsa de maracuyá, lechuga fresca, papas a la francesa y salsa caleña.", imagen: "img/products/generacion-milenials.webp", precio: 25900 },
+      { nombre: "Generación X", desc: "Carne angus 140g, pan artesanal, doble queso mozarella, tocino ahumado pork, cebolla encurtida en salsa de arrechón, lechuga fresca, papas a la francesa y salsa con sabor a Cali.", imagen: "img/products/generacion-x.webp", precio: 25900 },
+      { nombre: "American Angus", desc: "Pan artesanal a las finas hierbas, 140g de carne 100% Angus, tocino ahumado, queso cheddar, lechuga crespa, tomates frescos, cebolla crispy, papas a la francesa y salsa de la casa.", imagen: "img/products/american-angus.webp", precio: 25900 }
     ]
   },
   {
@@ -1034,72 +1033,72 @@ const MENU = [
     icono: "🍔",
     sub: "Wario Golden",
     productos: [
-      { nombre: "Wario Golden", desc: "Pan brioche con ajonjolí black, 140g de res, tocino ahumado, ripio de papa, cebolla caramelizada, lechuga crespa, 160g de queso doble crema fundido enchapado en oro, papas a la francesa y salsa caleña.", imagen: "https://i.postimg.cc/8kvFTh00/WARIO-GOLDEN.png", precio: 26900 },
-      { nombre: "Triple Mela", desc: "Pan artesanal de orégano, 140g de res, costilla, tocino ahumado, maduritos, queso cheddar, cebolla crispy, lechuga crespa, papas a la francesa y salsa caleña.", imagen: "https://i.postimg.cc/fWd3Mxrq/TRIPLE-MELA.png", precio: 25900 },
-      { nombre: "Chicken Express", desc: "Pan artesanal a las finas hierbas, 120g de pollo asado en trocitos, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/LXYJYf4W/CHICKEN-ESPRESS.png", precio: 21900 },
-      { nombre: "American Express", desc: "Pan artesanal a las finas hierbas, 140g de res, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/s20BgKzN/AMERICAN-EXPRESS.png", precio: 19900 }
+      { nombre: "Wario Golden", desc: "Pan brioche con ajonjolí black, 140g de res, tocino ahumado, ripio de papa, cebolla caramelizada, lechuga crespa, 160g de queso doble crema fundido enchapado en oro, papas a la francesa y salsa caleña.", imagen: "img/products/wario-golden.webp", precio: 26900 },
+      { nombre: "Triple Mela", desc: "Pan artesanal de orégano, 140g de res, costilla, tocino ahumado, maduritos, queso cheddar, cebolla crispy, lechuga crespa, papas a la francesa y salsa caleña.", imagen: "img/products/triple-mela.webp", precio: 25900 },
+      { nombre: "Chicken Express", desc: "Pan artesanal a las finas hierbas, 120g de pollo asado en trocitos, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.", imagen: "img/products/chicken-express.webp", precio: 21900 },
+      { nombre: "American Express", desc: "Pan artesanal a las finas hierbas, 140g de res, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.", imagen: "img/products/american-express.webp", precio: 19900 }
     ]
   },
   {
     categoria: "HOT DOGS",
     icono: "🌭",
     productos: [
-      { nombre: "Mexican", desc: "Pan artesanal brioche, salchicha americana importada, tocino ahumado, queso cheddar fundido, guacamole, nachos, ripio de papa, salsa de tomate y tajín.", imagen: "https://i.postimg.cc/2yn3TDZ2/MEXICAN.png", precio: 17800 },
-      { nombre: "Ranch XXL", desc: "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/dQC7J8x2/RANCH-XXL.png", precio: 15900 },
-      { nombre: "American", desc: "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/g0Bw24pC/AMERICAN-HOT-DOG.png", precio: 14900 }
+      { nombre: "Mexican", desc: "Pan artesanal brioche, salchicha americana importada, tocino ahumado, queso cheddar fundido, guacamole, nachos, ripio de papa, salsa de tomate y tajín.", imagen: "img/products/mexican-hotdog.webp", precio: 17800 },
+      { nombre: "Ranch XXL", desc: "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.", imagen: "img/products/ranch-xxl.webp", precio: 15900 },
+      { nombre: "American", desc: "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.", imagen: "img/products/american-hotdog.webp", precio: 14900 }
     ]
   },
   {
     categoria: "ENTRADAS",
     icono: "🧺",
     productos: [
-      { nombre: "Nachos Tex-Mex", desc: "Para 2 personas. Nachos con carne molida, guacamole, pico e' gallo y queso cheddar.", imagen: "https://i.postimg.cc/4ypnwg9q/NACHOS-TEX-MEX.png", precio: 20000, personas: 2 },
-      { nombre: "Bravas Wario", desc: "Papas fritas con chorizo santarrosano, pimienta al toque y pico e' gallo.", imagen: "https://i.postimg.cc/sXQMQSft/BRAVAS-WARIO.png", precio: 16000 },
-      { nombre: "Papas Crocantes", desc: "Cantidades alarmantes de crocantes papas fritas con la deliciosa salsa caleña.", imagen: "https://i.postimg.cc/7hSbXkz4/PAPAS-CROCANTES.png", precio: 6900 }
+      { nombre: "Nachos Tex-Mex", desc: "Para 2 personas. Nachos con carne molida, guacamole, pico e' gallo y queso cheddar.", imagen: "img/products/nachos-tex-mex.webp", precio: 20000, personas: 2 },
+      { nombre: "Bravas Wario", desc: "Papas fritas con chorizo santarrosano, pimienta al toque y pico e' gallo.", imagen: "img/products/bravas-wario.webp", precio: 16000 },
+      { nombre: "Papas Crocantes", desc: "Cantidades alarmantes de crocantes papas fritas con la deliciosa salsa caleña.", imagen: "img/products/papas-crocantes.webp", precio: 6900 }
     ]
   },
   {
     categoria: "SALCHIS",
     icono: "🌽",
     productos: [
-      { nombre: "Killer Bulled", desc: "Para 4 personas. Carne molida, pollo desmechado, tocino, queso mozarella fundido, maicitos dulces y salsas.", imagen: "https://i.postimg.cc/4dDmzdmV/KILLER-BULLED.png", precio: 49900, personas: 4 },
-      { nombre: "Salvajada Wario", desc: "Para 3 personas. Pollo, res, costilla ahumada sin hueso, ripio de papa, queso mozarella rayado y salsa caleña.", imagen: "https://i.postimg.cc/2jWqC4Kw/SALVAJADA-WARIO.png", precio: 44900, personas: 3 },
-      { nombre: "Mexicali", desc: "Para 2 personas. Entrada de nachos con guacamole, pollo desmechado con pico de gallo, costillas a la BBQ sweet, queso mozarella y salsas.", imagen: "https://i.postimg.cc/hvVhMBds/MEXI-CALI.png", precio: 40900, personas: 2 },
-      { nombre: "Salvajada Special", desc: "Para 2 personas. Trocitos de pollo y res, ripio de papa, queso mozarella rayado y salsa caleña.", imagen: "https://i.postimg.cc/MZBczyFm/SALVAJADA-ESPECIAL.png", precio: 34900, personas: 2 },
-      { nombre: "Salchi Personal", desc: "Personal, con ripio de papa, queso mozarella rayado, salchicha, papas fritas y salsa caleña.", imagen: "https://i.postimg.cc/dQC7J8xR/SALCHI-PERSONAL.png", precio: 14000 }
+      { nombre: "Killer Bulled", desc: "Para 4 personas. Carne molida, pollo desmechado, tocino, queso mozarella fundido, maicitos dulces y salsas.", imagen: "img/products/killer-bulled.webp", precio: 49900, personas: 4 },
+      { nombre: "Salvajada Wario", desc: "Para 3 personas. Pollo, res, costilla ahumada sin hueso, ripio de papa, queso mozarella rayado y salsa caleña.", imagen: "img/products/salvajada-wario.webp", precio: 44900, personas: 3 },
+      { nombre: "Mexicali", desc: "Para 2 personas. Entrada de nachos con guacamole, pollo desmechado con pico de gallo, costillas a la BBQ sweet, queso mozarella y salsas.", imagen: "img/products/mexicali.webp", precio: 40900, personas: 2 },
+      { nombre: "Salvajada Special", desc: "Para 2 personas. Trocitos de pollo y res, ripio de papa, queso mozarella rayado y salsa caleña.", imagen: "img/products/salvajada-especial.webp", precio: 34900, personas: 2 },
+      { nombre: "Salchi Personal", desc: "Personal, con ripio de papa, queso mozarella rayado, salchicha, papas fritas y salsa caleña.", imagen: "img/products/salchi-personal.webp", precio: 14000 }
     ]
   },
   {
     categoria: "ASADOS / GRILL",
     icono: "🔥",
     productos: [
-      { nombre: "Picada para 4 Personas", desc: "Costilla, chorizo, pollo, res, cerdo, moneditas de plátano, papas a la francesa y ensalada mixta.", imagen: "https://i.postimg.cc/J7XyRb2y/PICADA-X4.png", precio: 75000, personas: 4 },
-      { nombre: "Picada para 2 Personas", desc: "Costilla, chorizo, pollo, res, cerdo, papas a la francesa y ensalada mixta.", imagen: "https://i.postimg.cc/KcTKmnHR/PICADA-X2.png", precio: 40000, personas: 2 },
-      { nombre: "Punta de Anca", desc: "Charcoal-Grilled. Corte de punta de anca de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.", imagen: "https://i.postimg.cc/Y2F4t1sF/PUNTA-DE-ANCA.png", precio: 39900 },
-      { nombre: "Churrasco Argentino", desc: "Sirloin Steak. Corte de lomo caracha de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.", imagen: "https://i.postimg.cc/B6LjLDZr/CHURRASCO-ARGENTINO.png", precio: 36900 },
-      { nombre: "Costillas BBQ Sweet", desc: "Carne de costilla de 250g, croquetas de yuca, BBQ sweet, guacamole o salsa caleña.", imagen: "https://i.postimg.cc/50YXYvNj/COSTILLA-BBQ.png", precio: 24900 },
-      { nombre: "Chuzo Mixto", desc: "Costilla, cerdo y pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.", imagen: "https://i.postimg.cc/0QMzMm2P/CHUZO-MIXTO.png", precio: 21900 },
-      { nombre: "Chuzo de Pollo Gratinado", desc: "Filete de pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.", imagen: "https://i.postimg.cc/XJGrGF7S/CHUZO-DE-POLLO.png", precio: 21900 }
+      { nombre: "Picada para 4 Personas", desc: "Costilla, chorizo, pollo, res, cerdo, moneditas de plátano, papas a la francesa y ensalada mixta.", imagen: "img/products/picada-para-4-personas.webp", precio: 75000, personas: 4 },
+      { nombre: "Picada para 2 Personas", desc: "Costilla, chorizo, pollo, res, cerdo, papas a la francesa y ensalada mixta.", imagen: "img/products/picada-para-2-personas.webp", precio: 40000, personas: 2 },
+      { nombre: "Punta de Anca", desc: "Charcoal-Grilled. Corte de punta de anca de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.", imagen: "img/products/punta-de-anca.webp", precio: 39900 },
+      { nombre: "Churrasco Argentino", desc: "Sirloin Steak. Corte de lomo caracha de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.", imagen: "img/products/churrasco-argentino.webp", precio: 36900 },
+      { nombre: "Costillas BBQ Sweet", desc: "Carne de costilla de 250g, croquetas de yuca, BBQ sweet, guacamole o salsa caleña.", imagen: "img/products/costillas-bbq-sweet.webp", precio: 24900 },
+      { nombre: "Chuzo Mixto", desc: "Costilla, cerdo y pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.", imagen: "img/products/chuzo-mixto.webp", precio: 21900 },
+      { nombre: "Chuzo de Pollo Gratinado", desc: "Filete de pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.", imagen: "img/products/chuzo-de-pollo-gratinado.webp", precio: 21900 }
     ]
   },
   {
     categoria: "MAICITOS",
     icono: "🌽",
     productos: [
-      { nombre: "Maíz Ranch", desc: "Personal, con maicitos dulces, salchicha ranchera, tocineta, queso mozarella, ripio de papa, lechuga y salsa caleña.", imagen: "https://i.postimg.cc/br1dLhtb/MAIZ-RANCHERO.png", precio: 22900 },
-      { nombre: "Maíz Special", desc: "Personal, con maicitos dulces, pollo, tocineta, queso mozarella, ripio de papa, lechuga crespa y salsa con sabor a Cali.", imagen: "https://i.postimg.cc/LXcnzXn3/MAIZ-ESPECIAL.png", precio: 21900 }
+      { nombre: "Maíz Ranch", desc: "Personal, con maicitos dulces, salchicha ranchera, tocineta, queso mozarella, ripio de papa, lechuga y salsa caleña.", imagen: "img/products/maiz-ranch.webp", precio: 22900 },
+      { nombre: "Maíz Special", desc: "Personal, con maicitos dulces, pollo, tocineta, queso mozarella, ripio de papa, lechuga crespa y salsa con sabor a Cali.", imagen: "img/products/maiz-special.webp", precio: 21900 }
     ]
   },
   {
     categoria: "BEBIDAS",
     icono: "🥤",
     productos: [
-      { nombre: "Postobón 400 ml", desc: "Gaseosa surtidos disponibles.", imagen: "", precio: 4500 },
+      { nombre: "Postobón 400 ml", desc: "Gaseosa surtidos disponibles.", imagen: "img/products/postobon-400-ml.webp", precio: 4500 },
       { nombre: "Coca-Cola 500 ml", desc: "", imagen: "", precio: 5500 },
-      { nombre: "Ginger Ale 400 ml", desc: "", imagen: "", precio: 5500 },
+      { nombre: "Ginger Ale 400 ml", desc: "", imagen: "img/products/ginger-400-ml.webp", precio: 5500 },
       { nombre: "Ginger Michelada", desc: "", imagen: "", precio: 7500 },
-      { nombre: "Postobón 1 lt", desc: "Para compartir en mesa.", imagen: "", precio: 6500 },
-      { nombre: "Coca-Cola 1.5 lt", desc: "Para compartir en mesa.", imagen: "", precio: 9500 },
+      { nombre: "Postobón 1 lt", desc: "Para compartir en mesa.", imagen: "img/products/postobon-1-lt.webp", precio: 6500 },
+      { nombre: "Coca-Cola 1.5 lt", desc: "Para compartir en mesa.", imagen: "img/products/coca-cola-1-5-lt.webp", precio: 9500 },
       { nombre: "Agua Natural 600 ml", desc: "", imagen: "", precio: 2500 },
       { nombre: "Agua con Gas 600 ml", desc: "", imagen: "", precio: 3000 }
     ]
@@ -1108,18 +1107,18 @@ const MENU = [
     categoria: "CERVEZAS",
     icono: "🍺",
     productos: [
-      { nombre: "Stella Artois", desc: "", imagen: "", precio: 7000 },
-      { nombre: "Coronita", desc: "", imagen: "", precio: 6000 },
-      { nombre: "Club Colombia", desc: "", imagen: "", precio: 6000 },
-      { nombre: "Águila Light", desc: "", imagen: "", precio: 5500 },
-      { nombre: "Poker", desc: "", imagen: "", precio: 5500 }
+      { nombre: "Stella Artois", desc: "", imagen: "img/products/stella-artois.webp", precio: 7000 },
+      { nombre: "Coronita", desc: "", imagen: "img/products/coronita.webp", precio: 6000 },
+      { nombre: "Club Colombia", desc: "", imagen: "img/products/club-colombia.webp", precio: 6000 },
+      { nombre: "Águila Light", desc: "", imagen: "img/products/aguila-light.webp", precio: 5500 },
+      { nombre: "Poker", desc: "", imagen: "img/products/poker.webp", precio: 5500 }
     ]
   },
   {
     categoria: "LIMONADAS",
     icono: "🍋",
     productos: [
-      { nombre: "Limonada Natural", desc: "", imagen: "", precio: 7000 },
+      { nombre: "Limonada Natural", desc: "", imagen: "img/products/limonada-natural-16oz.webp", precio: 7000 },
       { nombre: "Limonada Cerezada", desc: "", imagen: "", precio: 10000 },
       { nombre: "Limonada de Coco", desc: "", imagen: "", precio: 10000 },
       { nombre: "Limonada Frutos Rojos", desc: "", imagen: "", precio: 10000 }
