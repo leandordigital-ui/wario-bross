@@ -37,9 +37,73 @@
 <link rel="preload" as="image" href="img/brand/logo-wario-bross-192.png">
 
 <!-- ============================================================
-     Fase 7 (pendiente): Schema.org JSON-LD (Restaurant/LocalBusiness)
-     se insertará aquí una vez esté cerrada la sección Ubicación.
+     Fase 7: Schema.org JSON-LD (FastFoodRestaurant)
+     Todos los valores provienen de la fuente de verdad real del
+     proyecto (CONFIG / información confirmada). No se inventan
+     coordenadas GPS, código postal, rango de precios ni
+     calificaciones: se omiten hasta tener el dato real.
 ============================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FastFoodRestaurant",
+  "@id": "https://wario-bross.vercel.app/#restaurant",
+  "name": "Wario Bross",
+  "url": "https://wario-bross.vercel.app/",
+  "image": [
+    "https://wario-bross.vercel.app/img/brand/logo-wario-bross-512.png",
+    "https://wario-bross.vercel.app/img/hero/hero-wario-bross.webp"
+  ],
+  "telephone": "+573214477999",
+  "servesCuisine": [
+    "Hamburguesas",
+    "Hot Dogs",
+    "Asados",
+    "Comida rápida"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cra. 85C # 43-69, El Caney",
+    "addressLocality": "Cali",
+    "addressRegion": "Valle del Cauca",
+    "addressCountry": "CO"
+  },
+  "hasMap": "https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+      "opens": "16:00",
+      "closes": "00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "16:00",
+      "closes": "01:00"
+    }
+  ],
+  "menu": "https://wario-bross.vercel.app/#menu",
+  "sameAs": [
+    "https://instagram.com/warioburger"
+  ],
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://menu.fu.do/wariobross",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "deliveryMethod": [
+      "http://purl.org/goodrelations/v1#DeliveryModePickUp",
+      "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"
+    ]
+  }
+}
+</script>
 
 <style>
 /* ============================================================
@@ -1021,9 +1085,8 @@ button:focus-visible{
   ======================================= -->
   <section class="hero" id="inicio">
     <div class="hero-media">
-      <!-- TODO Fase 8: migrar esta imagen a /img local (actualmente en postimg.cc) -->
       <img
-        src="https://i.postimg.cc/mgtHMv4V/Combo-Pareja-16-9.png"
+        src="img/hero/hero-wario-bross.webp"
         alt="Combo Parejas de Wario Bross: hamburguesas, papas a la francesa y limonadas"
         loading="eager" fetchpriority="high">
     </div>
