@@ -72,18 +72,664 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Sunday"
+      ],
       "opens": "16:00",
       "closes": "00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Friday", "Saturday"],
+      "dayOfWeek": [
+        "Friday",
+        "Saturday"
+      ],
       "opens": "16:00",
       "closes": "01:00"
     }
   ],
-  "menu": "https://wario-bross.vercel.app/#menu",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menú Wario Bross",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "PROMOS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Combo Familiar Wario (Bacon)",
+            "offers": {
+              "@type": "Offer",
+              "price": 63900,
+              "priceCurrency": "COP"
+            },
+            "description": "4 Wario Burger con tocineta, 4 papas a la francesa y 1 gaseosa litro Postobón.",
+            "image": "https://wario-bross.vercel.app/img/products/combo-familiar-wario-bacon.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Combo Parejas",
+            "offers": {
+              "@type": "Offer",
+              "price": 37900,
+              "priceCurrency": "COP"
+            },
+            "description": "2 Wario Burger, 2 limonadas, 1 papas a la francesa con tocineta y queso cheddar. ¡Gratis 1 copa de helado!",
+            "image": "https://wario-bross.vercel.app/img/products/combo-parejas.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "2x1 Angus Burger",
+            "offers": {
+              "@type": "Offer",
+              "price": 31900,
+              "priceCurrency": "COP"
+            },
+            "description": "2 hamburguesas con carne 100% black Angus importada, con papas a la francesa para 2 personas, salsa caleña y salsa de ajo."
+          },
+          {
+            "@type": "MenuItem",
+            "name": "2x1 Wario Burger",
+            "offers": {
+              "@type": "Offer",
+              "price": 26000,
+              "priceCurrency": "COP"
+            },
+            "description": "2 hamburguesas con carne de res tradicional, papas a la francesa, acompañadas con salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/2x1-wario-burger.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "PREMIUM BURGERS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Generación Crystal",
+            "offers": {
+              "@type": "Offer",
+              "price": 29900,
+              "priceCurrency": "COP"
+            },
+            "description": "Doble carne angus 200g, pan artesanal de orégano, doble queso cheddar, doble tocino ahumado pork, cebolla crispy, salsa de maracuyá, lechuga y tomates frescos, papas a la francesa y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/generacion-crystal.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Generación Milenials",
+            "offers": {
+              "@type": "Offer",
+              "price": 25900,
+              "priceCurrency": "COP"
+            },
+            "description": "Carne angus 140g, pan artesanal, quesillo, costilla carnuda, pepinillos dulces, cebolla caramelizada, salsa de maracuyá, lechuga fresca, papas a la francesa y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/generacion-milenials.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Generación X",
+            "offers": {
+              "@type": "Offer",
+              "price": 25900,
+              "priceCurrency": "COP"
+            },
+            "description": "Carne angus 140g, pan artesanal, doble queso mozarella, tocino ahumado pork, cebolla encurtida en salsa de arrechón, lechuga fresca, papas a la francesa y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/generacion-x.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "American Angus",
+            "offers": {
+              "@type": "Offer",
+              "price": 25900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal a las finas hierbas, 140g de carne 100% Angus, tocino ahumado, queso cheddar, lechuga crespa, tomates frescos, cebolla crispy, papas a la francesa y salsa de la casa.",
+            "image": "https://wario-bross.vercel.app/img/products/american-angus.webp"
+          }
+        ],
+        "description": "Generación Crystal"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "CLASIC BURGERS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Wario Golden",
+            "offers": {
+              "@type": "Offer",
+              "price": 26900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan brioche con ajonjolí black, 140g de res, tocino ahumado, ripio de papa, cebolla caramelizada, lechuga crespa, 160g de queso doble crema fundido enchapado en oro, papas a la francesa y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/wario-golden.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Triple Mela",
+            "offers": {
+              "@type": "Offer",
+              "price": 25900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal de orégano, 140g de res, costilla, tocino ahumado, maduritos, queso cheddar, cebolla crispy, lechuga crespa, papas a la francesa y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/triple-mela.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Chicken Express",
+            "offers": {
+              "@type": "Offer",
+              "price": 21900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal a las finas hierbas, 120g de pollo asado en trocitos, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/chicken-express.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "American Express",
+            "offers": {
+              "@type": "Offer",
+              "price": 19900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal a las finas hierbas, 140g de res, tocino ahumado, ripio de papa, lechuga crespa, cebolla caramelizada, queso cheddar, papas a la francesa y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/american-express.webp"
+          }
+        ],
+        "description": "Wario Golden"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "HOT DOGS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Mexican",
+            "offers": {
+              "@type": "Offer",
+              "price": 17800,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal brioche, salchicha americana importada, tocino ahumado, queso cheddar fundido, guacamole, nachos, ripio de papa, salsa de tomate y tajín.",
+            "image": "https://wario-bross.vercel.app/img/products/mexican-hotdog.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Ranch XXL",
+            "offers": {
+              "@type": "Offer",
+              "price": 15900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/ranch-xxl.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "American",
+            "offers": {
+              "@type": "Offer",
+              "price": 14900,
+              "priceCurrency": "COP"
+            },
+            "description": "Pan artesanal brioche, salchicha ranchera XXL, queso cheddar, mayonesa, cebolla y tomates picados frescos, ripio de papa, salsa de tomate y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/american-hotdog.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "ENTRADAS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Nachos Tex-Mex",
+            "offers": {
+              "@type": "Offer",
+              "price": 20000,
+              "priceCurrency": "COP"
+            },
+            "description": "Para 2 personas. Nachos con carne molida, guacamole, pico e' gallo y queso cheddar.",
+            "image": "https://wario-bross.vercel.app/img/products/nachos-tex-mex.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Bravas Wario",
+            "offers": {
+              "@type": "Offer",
+              "price": 16000,
+              "priceCurrency": "COP"
+            },
+            "description": "Papas fritas con chorizo santarrosano, pimienta al toque y pico e' gallo.",
+            "image": "https://wario-bross.vercel.app/img/products/bravas-wario.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Papas Crocantes",
+            "offers": {
+              "@type": "Offer",
+              "price": 6900,
+              "priceCurrency": "COP"
+            },
+            "description": "Cantidades alarmantes de crocantes papas fritas con la deliciosa salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/papas-crocantes.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "SALCHIS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Killer Bulled",
+            "offers": {
+              "@type": "Offer",
+              "price": 49900,
+              "priceCurrency": "COP"
+            },
+            "description": "Para 4 personas. Carne molida, pollo desmechado, tocino, queso mozarella fundido, maicitos dulces y salsas.",
+            "image": "https://wario-bross.vercel.app/img/products/killer-bulled.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Salvajada Wario",
+            "offers": {
+              "@type": "Offer",
+              "price": 44900,
+              "priceCurrency": "COP"
+            },
+            "description": "Para 3 personas. Pollo, res, costilla ahumada sin hueso, ripio de papa, queso mozarella rayado y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/salvajada-wario.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Mexicali",
+            "offers": {
+              "@type": "Offer",
+              "price": 40900,
+              "priceCurrency": "COP"
+            },
+            "description": "Para 2 personas. Entrada de nachos con guacamole, pollo desmechado con pico de gallo, costillas a la BBQ sweet, queso mozarella y salsas.",
+            "image": "https://wario-bross.vercel.app/img/products/mexicali.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Salvajada Special",
+            "offers": {
+              "@type": "Offer",
+              "price": 34900,
+              "priceCurrency": "COP"
+            },
+            "description": "Para 2 personas. Trocitos de pollo y res, ripio de papa, queso mozarella rayado y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/salvajada-especial.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Salchi Personal",
+            "offers": {
+              "@type": "Offer",
+              "price": 14000,
+              "priceCurrency": "COP"
+            },
+            "description": "Personal, con ripio de papa, queso mozarella rayado, salchicha, papas fritas y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/salchi-personal.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "ASADOS / GRILL",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Picada para 4 Personas",
+            "offers": {
+              "@type": "Offer",
+              "price": 75000,
+              "priceCurrency": "COP"
+            },
+            "description": "Costilla, chorizo, pollo, res, cerdo, moneditas de plátano, papas a la francesa y ensalada mixta.",
+            "image": "https://wario-bross.vercel.app/img/products/picada-para-4-personas.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Picada para 2 Personas",
+            "offers": {
+              "@type": "Offer",
+              "price": 40000,
+              "priceCurrency": "COP"
+            },
+            "description": "Costilla, chorizo, pollo, res, cerdo, papas a la francesa y ensalada mixta.",
+            "image": "https://wario-bross.vercel.app/img/products/picada-para-2-personas.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Punta de Anca",
+            "offers": {
+              "@type": "Offer",
+              "price": 39900,
+              "priceCurrency": "COP"
+            },
+            "description": "Charcoal-Grilled. Corte de punta de anca de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.",
+            "image": "https://wario-bross.vercel.app/img/products/punta-de-anca.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Churrasco Argentino",
+            "offers": {
+              "@type": "Offer",
+              "price": 36900,
+              "priceCurrency": "COP"
+            },
+            "description": "Sirloin Steak. Corte de lomo caracha de 300g, croquetas de yuca frita y ensalada mixta, acompañadas con chimichurri y guacamole.",
+            "image": "https://wario-bross.vercel.app/img/products/churrasco-argentino.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Costillas BBQ Sweet",
+            "offers": {
+              "@type": "Offer",
+              "price": 24900,
+              "priceCurrency": "COP"
+            },
+            "description": "Carne de costilla de 250g, croquetas de yuca, BBQ sweet, guacamole o salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/costillas-bbq-sweet.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Chuzo Mixto",
+            "offers": {
+              "@type": "Offer",
+              "price": 21900,
+              "priceCurrency": "COP"
+            },
+            "description": "Costilla, cerdo y pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.",
+            "image": "https://wario-bross.vercel.app/img/products/chuzo-mixto.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Chuzo de Pollo Gratinado",
+            "offers": {
+              "@type": "Offer",
+              "price": 21900,
+              "priceCurrency": "COP"
+            },
+            "description": "Filete de pollo, con croquetas de yuca, ensalada mixta, acompañada con chimichurri y guacamole.",
+            "image": "https://wario-bross.vercel.app/img/products/chuzo-de-pollo-gratinado.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "MAICITOS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Maíz Ranch",
+            "offers": {
+              "@type": "Offer",
+              "price": 22900,
+              "priceCurrency": "COP"
+            },
+            "description": "Personal, con maicitos dulces, salchicha ranchera, tocineta, queso mozarella, ripio de papa, lechuga y salsa caleña.",
+            "image": "https://wario-bross.vercel.app/img/products/maiz-ranch.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Maíz Special",
+            "offers": {
+              "@type": "Offer",
+              "price": 21900,
+              "priceCurrency": "COP"
+            },
+            "description": "Personal, con maicitos dulces, pollo, tocineta, queso mozarella, ripio de papa, lechuga crespa y salsa con sabor a Cali.",
+            "image": "https://wario-bross.vercel.app/img/products/maiz-special.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "BEBIDAS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Postobón 400 ml",
+            "offers": {
+              "@type": "Offer",
+              "price": 4500,
+              "priceCurrency": "COP"
+            },
+            "description": "Gaseosa surtidos disponibles.",
+            "image": "https://wario-bross.vercel.app/img/products/postobon-400-ml.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Coca-Cola 500 ml",
+            "offers": {
+              "@type": "Offer",
+              "price": 5500,
+              "priceCurrency": "COP"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Ginger Ale 400 ml",
+            "offers": {
+              "@type": "Offer",
+              "price": 5500,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/ginger-400-ml.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Ginger Michelada",
+            "offers": {
+              "@type": "Offer",
+              "price": 7500,
+              "priceCurrency": "COP"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Postobón 1 lt",
+            "offers": {
+              "@type": "Offer",
+              "price": 6500,
+              "priceCurrency": "COP"
+            },
+            "description": "Para compartir en mesa.",
+            "image": "https://wario-bross.vercel.app/img/products/postobon-1-lt.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Coca-Cola 1.5 lt",
+            "offers": {
+              "@type": "Offer",
+              "price": 9500,
+              "priceCurrency": "COP"
+            },
+            "description": "Para compartir en mesa.",
+            "image": "https://wario-bross.vercel.app/img/products/coca-cola-1-5-lt.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Agua Natural 600 ml",
+            "offers": {
+              "@type": "Offer",
+              "price": 2500,
+              "priceCurrency": "COP"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Agua con Gas 600 ml",
+            "offers": {
+              "@type": "Offer",
+              "price": 3000,
+              "priceCurrency": "COP"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "CERVEZAS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Stella Artois",
+            "offers": {
+              "@type": "Offer",
+              "price": 7000,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/stella-artois.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Coronita",
+            "offers": {
+              "@type": "Offer",
+              "price": 6000,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/coronita.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Club Colombia",
+            "offers": {
+              "@type": "Offer",
+              "price": 6000,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/club-colombia.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Águila Light",
+            "offers": {
+              "@type": "Offer",
+              "price": 5500,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/aguila-light.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Poker",
+            "offers": {
+              "@type": "Offer",
+              "price": 5500,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/poker.webp"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "LIMONADAS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Limonada Natural",
+            "offers": {
+              "@type": "Offer",
+              "price": 7000,
+              "priceCurrency": "COP"
+            },
+            "image": "https://wario-bross.vercel.app/img/products/limonada-natural-16oz.webp"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Limonada Cerezada",
+            "offers": {
+              "@type": "Offer",
+              "price": 10000,
+              "priceCurrency": "COP"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Limonada de Coco",
+            "offers": {
+              "@type": "Offer",
+              "price": 10000,
+              "priceCurrency": "COP"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Limonada Frutos Rojos",
+            "offers": {
+              "@type": "Offer",
+              "price": 10000,
+              "priceCurrency": "COP"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "JUGOS",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Jugo Natural 16 oz",
+            "offers": {
+              "@type": "Offer",
+              "price": 7000,
+              "priceCurrency": "COP"
+            },
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Jugo en Leche 16 oz",
+            "offers": {
+              "@type": "Offer",
+              "price": 9000,
+              "priceCurrency": "COP"
+            },
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Jarra Natural",
+            "offers": {
+              "@type": "Offer",
+              "price": 19000,
+              "priceCurrency": "COP"
+            },
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Jarra en Leche",
+            "offers": {
+              "@type": "Offer",
+              "price": 24000,
+              "priceCurrency": "COP"
+            },
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+          }
+        ],
+        "description": "Sabores: mango, mora, fresa, lulo, maracuyá"
+      }
+    ]
+  },
   "sameAs": [
     "https://instagram.com/warioburger"
   ],
