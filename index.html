@@ -17,6 +17,7 @@
 <!-- Favicon y logo de marca: versiones PNG con fondo transparente -->
 <link rel="icon" type="image/png" sizes="48x48" href="img/brand/favicon-48.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png">
+<link rel="shortcut icon" href="img/brand/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/brand/logo-wario-bross-512.png">
 
 <!-- Open Graph — imagen OG 1200x630 propia pendiente (Fase 8). Placeholder: logo -->
@@ -55,7 +56,7 @@
     "https://wario-bross.vercel.app/img/hero/hero-wario-bross.webp"
   ],
   "telephone": "+573214477999",
-  "priceRange": "COP 2.500 - COP 75.000",
+  "priceRange": "$2.500 - $75.000",
   "servesCuisine": [
     "Hamburguesas",
     "Hot Dogs",
@@ -67,7 +68,6 @@
     "streetAddress": "Cra. 85C # 43-69, El Caney",
     "addressLocality": "Cali",
     "addressRegion": "Valle del Cauca",
-    "postalCode": "760033",
     "addressCountry": "CO"
   },
   "geo": {
@@ -699,7 +699,8 @@
               "price": 7000,
               "priceCurrency": "COP"
             },
-            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.",
+            "image": "https://wario-bross.vercel.app/img/products/vaso-jugo-natural.webp"
           },
           {
             "@type": "MenuItem",
@@ -709,7 +710,8 @@
               "price": 9000,
               "priceCurrency": "COP"
             },
-            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.",
+            "image": "https://wario-bross.vercel.app/img/products/jugo-en-leche.webp"
           },
           {
             "@type": "MenuItem",
@@ -719,7 +721,8 @@
               "price": 19000,
               "priceCurrency": "COP"
             },
-            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.",
+            "image": "https://wario-bross.vercel.app/img/products/jarra-jugo-natural.webp"
           },
           {
             "@type": "MenuItem",
@@ -729,7 +732,8 @@
               "price": 24000,
               "priceCurrency": "COP"
             },
-            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá."
+            "description": "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.",
+            "image": "https://wario-bross.vercel.app/img/products/jarra-en-leche.webp"
           }
         ],
         "description": "Sabores: mango, mora, fresa, lulo, maracuyá"
@@ -1566,7 +1570,6 @@ button:focus-visible{
 }
 
 .footer-mapa {
-  position: relative;
   margin-top: 8px;
   border-radius: 12px;
   overflow: hidden;
@@ -1580,20 +1583,6 @@ button:focus-visible{
   height: 100%;
   border: 0;
   display: block;
-  pointer-events: none; /* el iframe es solo visual: el clic real lo maneja el enlace de abajo */
-}
-
-/* Enlace real superpuesto al mapa: garantiza que el clic siempre lleve
-   al perfil verificado de Google Maps (CONFIG.mapsUrl), sin importar
-   qué punto exacto muestre la previsualización del iframe embebido. */
-.footer-mapa-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.footer-mapa-overlay:hover,
-.footer-mapa-overlay:focus-visible {
-  background: rgba(0, 0, 0, 0.08);
 }
 
 .footer-hours {
@@ -1914,8 +1903,7 @@ button:focus-visible{
               <iframe
                 title="Mapa de ubicación de Wario Bross en El Caney, Cali"
                 src="https://www.google.com/maps?q=Cra.%2085C%20%23%2043-69%2C%20El%20Caney%2C%20Cali%2C%20Colombia&output=embed"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
-              <a class="footer-mapa-overlay" href="https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6" target="_blank" rel="noopener noreferrer" aria-label="Abrir la ubicación de Wario Bross en Google Maps" data-maps-link></a>
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="footer-contact-item"><span class="footer-contact-label">Teléfono</span><a href="tel:+573214477999" data-phone-link>321 447 7999</a></div>
@@ -2002,7 +1990,6 @@ const MENU = [
   {
     categoria: "PREMIUM BURGERS",
     icono: "🍔",
-    sub: "Generación Crystal",
     productos: [
       { nombre: "Generación Crystal", desc: "Doble carne angus 200g, pan artesanal de orégano, doble queso cheddar, doble tocino ahumado pork, cebolla crispy, salsa de maracuyá, lechuga y tomates frescos, papas a la francesa y salsa caleña.", imagen: "img/products/generacion-crystal.webp", precio: 29900 },
       { nombre: "Generación Milenials", desc: "Carne angus 140g, pan artesanal, quesillo, costilla carnuda, pepinillos dulces, cebolla caramelizada, salsa de maracuyá, lechuga fresca, papas a la francesa y salsa caleña.", imagen: "img/products/generacion-milenials.webp", precio: 25900 },
@@ -2013,7 +2000,6 @@ const MENU = [
   {
     categoria: "CLASIC BURGERS",
     icono: "🍔",
-    sub: "Wario Golden",
     productos: [
       { nombre: "Wario Golden", desc: "Pan brioche con ajonjolí black, 140g de res, tocino ahumado, ripio de papa, cebolla caramelizada, lechuga crespa, 160g de queso doble crema fundido enchapado en oro, papas a la francesa y salsa caleña.", imagen: "img/products/wario-golden.webp", precio: 26900 },
       { nombre: "Triple Mela", desc: "Pan artesanal de orégano, 140g de res, costilla, tocino ahumado, maduritos, queso cheddar, cebolla crispy, lechuga crespa, papas a la francesa y salsa caleña.", imagen: "img/products/triple-mela.webp", precio: 25900 },
@@ -2111,10 +2097,10 @@ const MENU = [
     icono: "🧃",
     sub: "Sabores: mango, mora, fresa, lulo, maracuyá",
     productos: [
-      { nombre: "Jugo Natural 16 oz", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "", precio: 7000 },
-      { nombre: "Jugo en Leche 16 oz", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "", precio: 9000 },
-      { nombre: "Jarra Natural", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "", precio: 19000 },
-      { nombre: "Jarra en Leche", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "", precio: 24000 }
+      { nombre: "Jugo Natural 16 oz", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "img/products/vaso-jugo-natural.webp", precio: 7000 },
+      { nombre: "Jugo en Leche 16 oz", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "img/products/jugo-en-leche.webp", precio: 9000 },
+      { nombre: "Jarra Natural", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "img/products/jarra-jugo-natural.webp", precio: 19000 },
+      { nombre: "Jarra en Leche", desc: "Elige tu sabor: mango, mora, fresa, lulo o maracuyá.", imagen: "img/products/jarra-en-leche.webp", precio: 24000 }
     ]
   }
 ];
