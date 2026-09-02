@@ -1575,6 +1575,7 @@ button:focus-visible{
 }
 
 .footer-mapa {
+  position: relative;
   margin-top: 8px;
   border-radius: 12px;
   overflow: hidden;
@@ -1588,6 +1589,17 @@ button:focus-visible{
   height: 100%;
   border: 0;
   display: block;
+  pointer-events: none; /* el embed no es interactivo: todo clic va al enlace real de abajo */
+}
+
+.footer-mapa-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.footer-mapa-link:focus-visible {
+  outline: 3px solid var(--color-dorado);
+  outline-offset: -3px;
 }
 
 .footer-hours {
@@ -1908,7 +1920,8 @@ button:focus-visible{
               <iframe
                 title="Mapa de ubicación de Wario Bross en El Caney, Cali"
                 src="https://www.google.com/maps?q=Cra.%2085C%20%23%2043-69%2C%20El%20Caney%2C%20Cali%2C%20Colombia&output=embed"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
+              <a class="footer-mapa-link" href="https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6" target="_blank" rel="noopener noreferrer" data-maps-link aria-label="Ver el perfil de Wario Bross en Google Maps"></a>
             </div>
           </div>
           <div class="footer-contact-item"><span class="footer-contact-label">Teléfono</span><a href="tel:+573214477999" data-phone-link>321 447 7999</a></div>
