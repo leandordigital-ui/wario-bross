@@ -8,6 +8,8 @@ El objetivo del sitio es un único flujo de conversión:
 
 **Explorar el menú → Elegir un producto → "Pedir ahora" → FUDO (plataforma oficial de pedidos)**
 
+Sitio en vivo: **https://wario-bross.vercel.app/**
+
 ---
 
 ## 📁 Estructura del proyecto
@@ -25,13 +27,14 @@ wario-bross/
 │
 └── img/
     ├── brand/           ← Logo y favicons oficiales
-    ├── products/         ← Fotografías reales del menú
-    └── reviews/           ← Capturas de reseñas de Google Maps (ver abajo)
+    ├── hero/             ← Imagen principal del Hero
+    └── products/          ← Fotografías reales del menú
 ```
 
-> **Nota:** `404.html`, `robots.txt`, `sitemap.xml` y `llms.txt` se generaron
-> en una entrega anterior del proyecto. Si no los tienes a la mano, pídeme
-> que te los vuelva a generar.
+> **Nota:** las reseñas de Google Maps ya no se guardan como capturas de
+> pantalla. Están transcritas como texto real dentro del array `RESENAS` en
+> `index.html`, junto con el resto del contenido data-driven del sitio (ver
+> sección de reseñas más abajo).
 
 ---
 
@@ -42,8 +45,7 @@ wario-bross/
 
 Si quieres verlo exactamente como se vería en internet (recomendado antes de
 publicar cambios grandes), puedes usar la extensión **Live Server** de VS Code,
-o simplemente confiar en las **Vista Previas automáticas de Vercel** (ver la
-guía de despliegue).
+o simplemente confiar en las **Vista Previas automáticas de Vercel**.
 
 ---
 
@@ -72,13 +74,19 @@ Cambia el valor ahí — se actualiza automáticamente en **todos** los botones,
 enlaces y tablas del sitio que lo usan. No necesitas buscar y reemplazar en
 varios lugares.
 
+> ⚠️ Si cambias `fudoUrl`, `address`, `mapsUrl`, `phoneDisplay` o `hours`,
+> avísale a quien mantenga el Schema.org (JSON-LD en el `<head>`) para que
+> también se actualice ahí — esos datos se generan a partir del mismo `CONFIG`
+> y `MENU`, pero viven como texto estático en el `<head>`, así que no se
+> sincronizan automáticamente.
+
 ### Agregar, quitar o editar un producto del menú
 
 Busca el bloque `const MENU = [ ... ];` dentro de `index.html`. Es una lista
 de categorías, cada una con su lista de productos:
 
 ```javascript
-{ nombre: "Nombre del producto", desc: "Descripción real.", imagen: "img/products/archivo.png", precio: 25900 }
+{ nombre: "Nombre del producto", desc: "Descripción real.", imagen: "img/products/archivo.webp", precio: 25900 }
 ```
 
 - Para **agregar** un producto nuevo, copia una línea parecida dentro de la
@@ -92,61 +100,56 @@ de categorías, cada una con su lista de productos:
 **No dupliques información en otras partes del HTML** — el menú visual se
 genera automáticamente a partir de este único array.
 
+> ⚠️ Igual que con `CONFIG`: el bloque `hasMenu` del Schema.org (JSON-LD) es
+> una copia estática de este array en el momento en que se generó. Si agregas,
+> quitas o cambias precios de productos, pide que se regenere ese bloque para
+> que no quede desactualizado.
+
 ### Agregar una foto nueva de producto
 
-1. Guarda la foto (idealmente en formato `.webp` o `.png`, optimizada) dentro
-   de `img/products/`.
+1. Guarda la foto (idealmente en formato `.webp`, optimizada) dentro de
+   `img/products/`.
 2. En el array `MENU`, en el producto correspondiente, escribe la ruta:
    `imagen: "img/products/nombre-del-archivo.webp"`.
 
 ---
 
-## ⭐ Sobre las reseñas de Google Maps
+## ⭐ Reseñas de Google Maps
 
-Las 5 capturas de pantalla de reseñas deben guardarse en:
+Las reseñas están transcritas como texto real (no imágenes) dentro del array
+`RESENAS` en `index.html`. Cada una incluye nombre del autor, calificación,
+texto, tiempo relativo y un enlace directo "Ver reseña en Google Maps".
 
-```
-img/reviews/
-```
+Para agregar una reseña nueva:
 
-**Importante:** una captura de pantalla por sí sola no es ideal para el sitio
-final, porque el texto dentro de una imagen no lo pueden leer los buscadores
-ni las personas que usan lector de pantalla (mala práctica de SEO/accesibilidad).
-
-Para construir la sección de reseñas correctamente, se necesita transcribir
-de cada captura:
-
-- Nombre del autor de la reseña
-- Calificación (número de estrellas)
-- Texto de la reseña
-- Fecha aproximada
-
-Con esos datos (reales, no inventados) se construye una sección de reseñas en
-HTML real, con el texto legible y un enlace "Ver reseña en Google Maps" —
-mucho mejor para SEO/GEO/AEO que una imagen. Si compartes las capturas o me
-transcribes esos datos, armo la sección.
+1. Copia el texto real de la reseña desde Google Maps (nunca inventar).
+2. Agrega un objeto nuevo al array `RESENAS`, siguiendo el mismo formato de
+   los existentes.
+3. El carrusel se actualiza automáticamente — no hay que tocar el HTML del
+   carrusel ni las tarjetas manualmente.
 
 ---
 
 ## 🚀 Publicar el sitio (Git + Vercel)
 
-Ver el archivo **`GUIA-VERCEL-GITHUB.md`** — instrucciones explicadas paso a
-paso, pensadas para alguien que nunca ha usado GitHub ni Vercel.
-
 Flujo recomendado una vez publicado por primera vez:
 
 ```
-Editas index.html
+Editas index.html (u otro archivo)
       ↓
-Subes el cambio a GitHub ("commit")
+Subes el cambio a GitHub ("commit" + "push")
       ↓
-Vercel detecta el cambio y publica solo automáticamente
+Vercel detecta el cambio y publica automáticamente
       ↓
-El sitio en internet se actualiza en menos de un minuto
+El sitio en internet se actualiza en 1-2 minutos
 ```
 
 No necesitas volver a "subir" el sitio manualmente cada vez — una vez
 conectado, Vercel publica cada cambio que subas a GitHub.
+
+**Antes de dar por cerrada una actualización**, verifica el archivo
+directamente en GitHub (no solo en tu carpeta local) para confirmar que el
+cambio realmente llegó al repositorio antes de asumir que ya está en vivo.
 
 ---
 
@@ -155,8 +158,9 @@ conectado, Vercel publica cada cambio que subas a GitHub.
 - El botón **"Pedir ahora"** sigue llevando a FUDO en todos los lugares.
 - El sitio se ve bien en un celular (la mayoría del tráfico es móvil).
 - No hay errores en la consola del navegador (clic derecho → Inspeccionar → Console).
-- Las imágenes nuevas cargan correctamente (rutas escritas bien, sin espacios).
+- Las imágenes nuevas cargan correctamente (rutas escritas bien, sin espacios, mismas mayúsculas/minúsculas).
 - Los precios y descripciones son reales, no inventados.
+- El archivo cambiado aparece actualizado en GitHub, no solo en tu carpeta local.
 
 ---
 
@@ -164,12 +168,12 @@ conectado, Vercel publica cada cambio que subas a GitHub.
 
 Colores extraídos directamente del logo real de Wario Bross:
 
-| Color | Uso |
-|---|---|
-| `#12121D` Negro-azulado | Footer, textos principales |
-| `#F6B73C` Dorado | Acentos sobre fondo oscuro |
-| `#F07C3E` Naranja | Acento decorativo (pan del logo) |
-| `#1E606F` Teal | Acentos/eyebrows sobre fondo claro |
+| Color                            | Uso                                                                               |
+| --------------------------------- | ----------------------------------------------------------------------------------- |
+| `#12121D` Negro-azulado          | Footer, textos principales                                                        |
+| `#F6B73C` Dorado                 | Acentos sobre fondo oscuro                                                        |
+| `#F07C3E` Naranja                | Acento decorativo (pan del logo)                                                  |
+| `#1E606F` Teal                   | Acentos/eyebrows sobre fondo claro                                                |
 | `#D8303F` Rojo (tomate del logo) | **Reservado exclusivamente** para el botón "Pedir ahora" y acciones de conversión |
 
 ---
