@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://wariobross.vercel.app/sitemap.xml
