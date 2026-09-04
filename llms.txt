@@ -9,7 +9,7 @@
 - Teléfono: +57 321 447 7999
 - Instagram: @warioburger — https://instagram.com/warioburger
 - Google Maps: https://maps.app.goo.gl/h5hn3VZ8JjnQwdgH6
-- Sitio web: https://wariobross.vercel.app/
+- Sitio web: https://wario-bross.vercel.app/
 
 ## Horarios
 - Lunes: 4:00 p. m. – 12:00 a. m.
@@ -35,10 +35,10 @@
 - ¿Dónde está Wario Bross? Cra. 85C # 43-69, barrio El Caney, Cali, Valle del Cauca.
 - ¿Qué hamburguesas ofrece Wario Bross? Ofrece 8 tipos, con opciones de carne Angus importada y carne de res nacional.
 - ¿Qué productos tiene el menú de Wario Bross? Hamburguesas, perros calientes, salchipapas, asados, maicitos, gaseosas, cervezas, limonadas y jugos.
-- ¿Cómo pedir? Desde la web, mediante el botón “Pedir ahora”, que dirige a FUDO.
+- ¿Cómo pedir? Desde la web, mediante el botón "Pedir ahora", que dirige a FUDO.
 
 ## Fuente principal
-La información pública y actualizada debe consultarse en https://wariobross.vercel.app/ y en la plataforma oficial de pedidos enlazada desde la web.
+La información pública y actualizada debe consultarse en https://wario-bross.vercel.app/ y en la plataforma oficial de pedidos enlazada desde la web.
 
 ## Nota
 llms.txt es un recurso complementario de contexto. No es un mecanismo garantizado de indexación, posicionamiento o recomendación por parte de sistemas de IA.
